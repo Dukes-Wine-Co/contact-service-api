@@ -25,7 +25,8 @@ This application will need to connect to a MongoDB server in order to read and w
 
 This project uses [Swagger Ui](https://swagger.io/) to dynamically generate the documentation for the api routes.
 
-This documentation can be accessed by visiting the `/docs` route or [localhost:$PORT/docs](localhost:3001/docs) if
+This documentation can be accessed by visiting the `/docs` route or [localhost:$PORT/docs](http://localhost:3001/docs
+) if
  you're running the
  application
  locally. 
