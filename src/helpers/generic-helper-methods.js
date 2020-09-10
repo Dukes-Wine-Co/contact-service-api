@@ -16,8 +16,27 @@ const createUnionsOfArrays = arr => {
     return [...new Set(combo)];
 };
 
+const convertMongoToGeneralSchema = obj => {
+    const objKeys = Object.keys(obj);
+    const reqArr = objKeys.filter(key => obj[key].required);
+    const propObj = {}
+
+    objKeys.forEach(key => {
+        propObj[key] = {
+            type: obj[key].type ? obj[key].type.name.toLowerCase() : 'objectId'
+
+        }
+    });
+
+    return {
+        required: reqArr,
+        properties: propObj
+    };
+}
+
 module.exports = {
     upperFirstChar,
     flattenObject,
-    createUnionsOfArrays
+    createUnionsOfArrays,
+    convertMongoToGeneralSchema
 };

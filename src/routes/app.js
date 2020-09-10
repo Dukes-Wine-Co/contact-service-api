@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const apiRoutes = require('./api-routes');
+const docRoutes = require('./doc-routes');
 const cors = require('cors');
 
 const app = express();
@@ -14,5 +15,6 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 apiRoutes(app);
+docRoutes(app);
 
 module.exports = app;
