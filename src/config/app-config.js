@@ -1,9 +1,9 @@
 const mongoUrl = process.env.MONGO_DB_URL;
-const apiUrl = process.env.PORT ? `http://localhost:${process.env.PORT}` : 'http://localhost:3001';
+const DWC_API_KEY = process.env.DWC_API_KEY;
 
 const config = {
     mongoUrl,
-    API_URL: `${apiUrl}/api`
+    DWC_API_KEY
 };
 
 module.exports = config;

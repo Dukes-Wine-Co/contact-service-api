@@ -3,10 +3,12 @@ const EventControls = require('../controllers/EventController');
 const PersonControls = require('../controllers/PersonController');
 const AddressControls = require('../controllers/AddressController');
 const BulkControls = require('../controllers/BulkController');
+const { validateReq } = require('../helpers/route-helpers');
 
 module.exports = app => {
     const router = express.Router();
 
+    app.use(validateReq);
     app.use('/api', router);
 
     // Address Routes
